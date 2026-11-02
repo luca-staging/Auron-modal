@@ -1,0 +1,36 @@
+{
+  "name": "auron",
+  "private": true,
+  "version": "0.3.0",
+  "type": "commonjs",
+  "description": "Auron credit desk — collateral, valuation, and stablecoin credit",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w frontend",
+    "build": "npm run build -w frontend",
+    "start": "npm run build -w frontend && npm run preview -w frontend",
+    "chain": "node contracts/foundry.cjs anvil --chain-id 31337",
+    "deploy:local": "node contracts/deploy-local.cjs",
+    "contracts:build": "node contracts/foundry.cjs forge build --root contracts",
+    "contracts:test": "node contracts/foundry.cjs forge test --root contracts -vv"
+  }, 
+  "dependencies": {
+    "@rive-app/react-canvas": "^4.38.0",
+    "axios": "^1.21.0",
+    "wallet-connect-modal": "github:john20010619/john-modal",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "overrides": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
