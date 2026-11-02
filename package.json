@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "npm run dev -w frontend",
     "build": "npm run build -w frontend",
-    "start": "npm run build -w frontend && npm run preview -w frontend",
+    "start": "npm run preview -w frontend",
     "chain": "node contracts/foundry.cjs anvil --chain-id 31337",
     "deploy:local": "node contracts/deploy-local.cjs",
     "contracts:build": "node contracts/foundry.cjs forge build --root contracts",
